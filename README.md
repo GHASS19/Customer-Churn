@@ -3,7 +3,7 @@
 ## Imbalanced Customer Churn using Logistic Regression, Random Forest Model and Support Vector Machine to predict if the customer will churn.
 
 ## 1. The Data
-[The Data](https://archive.ics.uci.edu/dataset/563/iranian+churn+dataset)https://archive.ics.uci.edu/dataset/563/iranian+churn+dataset)
+[The Data](https://archive.ics.uci.edu/dataset/563/iranian+churn+dataset)
 
 This dataset is randomly collected from an Iranian telecom companyâ€™s database over a period of 12 months. A total of 3150 rows of data, each representing a customer, bear information for 14 columns. The attributes that are in this dataset
 are call failures, frequency of SMS, number of complaints, number of distinct calls, subscription length, age group, the charge amount, type of service, seconds of use, status, frequency of use, and Customer Value.
