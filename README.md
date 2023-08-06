@@ -9,8 +9,10 @@ are call failures, frequency of SMS, number of complaints, number of distinct ca
 
 All of the attributes except for attribute churn is the aggregated data of the first 9 months. The churn labels are the state of the customers at the end of 12 months. The three months is the designated planning gap.
 
-(https://archive.ics.uci.edu/dataset/563/iranian+churn+dataset)https://archive.ics.uci.edu/dataset/563/iranian+churn+dataset)
+Here is a link to the dataset:
+https://archive.ics.uci.edu/dataset/563/iranian+churn+dataset)https://archive.ics.uci.edu/dataset/563/iranian+churn+dataset
 
+These are the 13 columns in the dataset:
 
 Anonymous Customer ID
 
