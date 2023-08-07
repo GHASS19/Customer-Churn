@@ -45,7 +45,7 @@ During the Data Wrangling stage we found:
 
 First thing I did in EDA was a heatmap to see what correlations we had that were positive or negitive.
 
-** High Correlation **
+**High Correlation**
 
 1. .96, Age & Age Group. five different groups and five ages in this database.
 
@@ -53,7 +53,7 @@ First thing I did in EDA was a heatmap to see what correlations we had that were
 
 3. .92, Customer Value & Frequency of SMS. This was the most interesting correlation. As the company values customers who use text messages.
 
-Low Correlation
+**Low Correlation**
 
 1. -.46, Status & Seconds of use. Obviously there is no correalation if the status of a customer is inactive, (2 for inactive and 1 for active) and seconds of telaphone calls.
 
