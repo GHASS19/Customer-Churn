@@ -2,7 +2,7 @@
 
 ![image](https://github.com/GHASS19/Customer-Churn/assets/86930309/c6bd7956-06ef-47e0-9ac1-46d51a3feb37)
 
-## Imbalanced Target Variable of Customer Churn using Logistic Regression, Random Forest Model and Support Vector Machine to predict if the customer will churn.
+## Imbalanced Target Variable using Logistic Regression, Random Forest Model and Support Vector Machine to predict if the customer will churn.
 
 ## 1. The Data
 [The Data](https://archive.ics.uci.edu/dataset/563/iranian+churn+dataset)
@@ -76,12 +76,14 @@ c. -.41, Status & Distinct Called Numbers. Customers cannot dial more numbers if
 
 ## 4. Data Preprocessing & Training
 
-1. I did a train/test split four Classification Models to predict the customer churn:
+1. # Handling class imbalance with class weights for Logistic Regression and Random ForestI did a 80/20 train/test split four Classification Models to predict the customer churn:
 
 a. Logistic Regression
 b. Random Forest Model
 c. Gradient Boosting
 d. Support Vector Machine
+
+I used a standard scaler and class weight of balanced for Logistic Regression and Random Forest Regression to improve convergence, performance, and interpretability. For the Gradient Boosting and Support Vector Machine I used SMOTE fo the class imbalance.
 
 2. I compared the four models metric scores to determine which is the best before I try cross validation and grid search on the models.  
 
