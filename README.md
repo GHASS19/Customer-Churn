@@ -33,4 +33,31 @@ These are the 14 columns in the dataset:
 
 During this stage of the project I discover the data columns in depth. I found the min, max, mean, standard deviation of each column. I found the value counts, unique values for a few columns. Most importantly we found that we have an imbalanced target varible, Customer Churn. More of the customers did not churn then did a big margin. 2655 did not churn compared to 495 who did. This is good for the company but now we need to account for this when do the train test split for our four models. 
 
-Fortunetaly we did not have any NaNs in the dataset. Typically this is an important aspect of a data science project and what to do with the null values. Should I make them into the median, mean, 0 values, etc. is what we have to determine to make the data ready for machine learning to get an accurate prediction of our target variable.
+Fortunately we did not have any NaNs in the dataset. Typically this is an important aspect of a data science project and what to do with the null values. Should I make them into the median, mean, 0 values, etc. is what we have to determine to make the data ready for machine learning to get an accurate prediction of our target variable.
+
+During the Data Wrangling stage we found:
+1. We have a wide range of call failures for each customer due to the high standard deviation of 7.263.
+2. We have more no complains than complains due to the mean being low at .0765.
+3. The average age of a customer was 30.99 and the customer value range was from 0-2165.28.
+4. On average the customers used text messages more than calls.
+
+## 3. Exploratory Data Analysis
+
+First thing I did in EDA was a heatmap to see what correlations we had that were positive or negitive.
+
+** High Correlation **
+
+1. .96, Age & Age Group. five different groups and five ages in this database.
+
+2. .95, Seconds of Use & Frequency of use. This makes sense as more calls and seconds of calls go hand in hand.
+
+3. .92, Customer Value & Frequency of SMS. This was the most interesting correlation. As the company values customers who use text messages.
+
+Low Correlation
+
+1. -.46, Status & Seconds of use. Obviously there is no correalation if the status of a customer is inactive, (2 for inactive and 1 for active) and seconds of telaphone calls.
+
+2. -.45, Status & Frequency of Use. This makes sense just like the previous correlation.
+
+3. -.41, Status & Distinct Called Numbers. Customers cannot dial more numbers if they are inactive.
+
