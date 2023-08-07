@@ -1,6 +1,8 @@
-# Customer Churn
+# Predicting Customer Churn for a Telecom Company
 
-## Imbalanced Customer Churn using Logistic Regression, Random Forest Model and Support Vector Machine to predict if the customer will churn.
+![image](https://github.com/GHASS19/Customer-Churn/assets/86930309/c6bd7956-06ef-47e0-9ac1-46d51a3feb37)
+
+## Imbalanced Target Variable of Customer Churn using Logistic Regression, Random Forest Model and Support Vector Machine to predict if the customer will churn.
 
 ## 1. The Data
 [The Data](https://archive.ics.uci.edu/dataset/563/iranian+churn+dataset)
