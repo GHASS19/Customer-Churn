@@ -30,3 +30,5 @@ These are the 14 columns in the dataset:
 14. Customer Value: The calculated value of customer
 
 ## 2. Data Wrangling
+
+During this stage of the project I discover the data columns in depth. I found the min, max, mean, standard deviation of each column. I found the value counts, unique values for a few columns. Most importantly we found that we have an imbalanced target varible, Customer Churn. More of the customers did not churn then did a big margin. 2655 did not churn compared to 495 who did. This is good for the company but now we need to account for this when do the train test split for our four models. Fortunetaly we did not have any NaNs in the dataset. Typically this is an important aspect of a data science project and what to do with the null values. Should I make them into the median, mean, 0 values, etc. is what we have to determine to make the data ready for machine learning to get an accurate prediction of our target variable.
