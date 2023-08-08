@@ -30,6 +30,7 @@ These are the 14 columns in the dataset:
 14. Customer Value: The calculated value of customer
 
 ## 2. Data Wrangling
+[Data Wrangling](https://colab.research.google.com/drive/1TEwnGjlsV8_GV6qv2hPs97oRMLc4yPNa#scrollTo=aI7LZ3hotZkc)
 
 During this stage of the project I discovered the data columns in depth. I found the min, max, mean, standard deviation of each column. I found the value counts, unique values for a few columns. Most importantly we found that we have an imbalanced target variable, Customer Churn. More of the customers did not churn than did by a big margin. 2655 did not churn compared to 495 who did. This is good for the company but we need to account for this when we do the train/test split for our four models. 
 
