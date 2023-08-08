@@ -38,7 +38,7 @@ Fortunately we did not have any NaNs in the dataset. Typically this is an import
 
 During the Data Wrangling stage we found:
 1. We have a wide range of call failures for each customer due to the high standard deviation of 7.263.
-2. We have more no complains than complains due to the mean being low at .0765.
+2. We have more no complaints than complaints due to the mean being low at .0765.
 3. The average age of a customer was 30.99 and the customer value range was from 0-2165.28.
 4. On average the customers used text messages more than calls.
 5. We have an unbalanced target variable of Churn where we have many more customers who did not churn, 2655 compared to 495 who actually did churn.
@@ -70,7 +70,7 @@ Here is some interesting findings:
 ![image](https://github.com/GHASS19/Customer-Churn/assets/86930309/162145cd-b130-4925-a975-c115172345be)
 
 3. Customers that churned did not use the phone company that much compared to those who keep using their services at the end of 12 months.
-4. From the EDA we found that no customers in the oldest and youngest groups canceled their membership. Very helpful for the company as they can target people in these two age groups. Also they could find out why customers in age groups 2-4 discontinued their services and see if they can fix the issue in a manner that is good for the business.
+4. From the EDA we found that no customers in the oldest and youngest groups canceled their membership. Very helpful for the company as they can target people in the other three groups to retain them. Also they could find out why customers in age groups 2-4 discontinued their services and see if they can fix the issue in a manner that is good for the business.
 5. Those that used the phone company to make phone calls did so using it for a longer time then the customers who cancelled their subscription at the end of 12 months.
 6. A very interesting find is that customers who had a contractual tariff plan, (2) did not churn at the end of the 12 months.
 7. The frequency which the customers use text messages has many high outliers but has a low median near 10 texts. The frequency of calls has some high outliers beyond the maxim as well. The median for calls per customer is around 50.
