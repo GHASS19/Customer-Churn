@@ -4,6 +4,8 @@
 
 ## Imbalanced Target Variable using Logistic Regression, Random Forest Model and Support Vector Machine to predict if the customer will churn.
 
+The Telecom Company wants to reduce their misclassification costs.  They want to minimize their false positives (predicting churn when the customer doesn’t actually churn) which might result in unnecessary retention efforts, while false negatives (failing to predict churn when the customer actually churns) could lead to revenue loss. 
+
 ## 1. The Data
 [The Data](https://archive.ics.uci.edu/dataset/563/iranian+churn+dataset)
 
@@ -76,7 +78,7 @@ c. -.41, Status & Distinct Called Numbers. Customers cannot dial more numbers if
 
 ## 4. Data Preprocessing & Training
 
-1. # Handling class imbalance with class weights for Logistic Regression and Random ForestI did a 80/20 train/test split four Classification Models to predict the customer churn:
+1. I Handled class imbalance with class weights for Logistic Regression and Random Forest. I did a 80/20 train/test split with four Classification Models to predict the customer churn:
 
 a. Logistic Regression
 b. Random Forest Model
