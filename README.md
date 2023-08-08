@@ -4,14 +4,12 @@
 
 ## Imbalanced Target Variable using Logistic Regression, Random Forest Model and Support Vector Machine to predict if the customer will churn.
 
-The Telecom Company wants to reduce their misclassification costs.  They want to minimize their false positives (predicting churn when the customer doesn’t actually churn) which might result in unnecessary retention efforts, while false negatives (failing to predict churn when the customer actually churns) could lead to revenue loss. 
+The Telecom Company wants to reduce their misclassification costs.  They want to minimize their false positives (predicting churn when the customer doesn’t actually churn) which might result in unnecessary retention efforts. They are also concered with false negatives (failing to predict churn when the customer actually churns) which could lead to revenue loss. Thus we will find the best model with the highest AUC-ROC and F-1 Scores.
 
 ## 1. The Data
 [The Data](https://archive.ics.uci.edu/dataset/563/iranian+churn+dataset)
 
-This dataset is randomly collected from an Iranian telecom companyâ€™s database over a period of 12 months. A total of 3150 rows of data, each representing a customer, bear information for 14 columns. The attributes that are in this dataset
-are call failures, frequency of SMS, number of complaints, number of distinct calls, subscription length, age group, the charge amount, type of service, seconds of use, status, frequency of use, and Customer Value.
-
+This dataset is randomly collected from an Iranian telecom companyâ€™s database over a period of 12 months. A total of 3150 rows of data, each representing a customer, bear information for 14 columns. 
 All of the attributes except for attribute churn is the aggregated data of the first 9 months. The churn labels are the state of the customers at the end of 12 months. The three months is the designated planning gap.
 
 These are the 14 columns in the dataset:
@@ -33,9 +31,9 @@ These are the 14 columns in the dataset:
 
 ## 2. Data Wrangling
 
-During this stage of the project I discover the data columns in depth. I found the min, max, mean, standard deviation of each column. I found the value counts, unique values for a few columns. Most importantly we found that we have an imbalanced target varible, Customer Churn. More of the customers did not churn then did a big margin. 2655 did not churn compared to 495 who did. This is good for the company but now we need to account for this when do the train test split for our four models. 
+During this stage of the project I discovered the data columns in depth. I found the min, max, mean, standard deviation of each column. I found the value counts, unique values for a few columns. Most importantly we found that we have an imbalanced target varible, Customer Churn. More of the customers did not churn then did by a big margin. 2655 did not churn compared to 495 who did. This is good for the company but we need to account for this when do the train test split for our four models. 
 
-Fortunately we did not have any NaNs in the dataset. Typically this is an important aspect of a data science project and what to do with the null values. Should I make them into the median, mean, 0 values, etc. is what we have to determine to make the data ready for machine learning to get an accurate prediction of our target variable.
+Fortunately we did not have any NaNs in the dataset. Typically this is an important aspect of a data science project and what to do with the null values. Wiether I should make them into the median, mean, 0 values, etc. is what we have to determine to make the data ready for machine learning to get an accurate prediction of our target variable.
 
 During the Data Wrangling stage we found:
 1. We have a wide range of call failures for each customer due to the high standard deviation of 7.263.
@@ -87,45 +85,22 @@ d. Support Vector Machine
 
 I used a standard scaler and class weight of balanced for Logistic Regression and Random Forest Regression to improve convergence, performance, and interpretability. For the Gradient Boosting and Support Vector Machine I used SMOTE fo the class imbalance.
 
-2. I compared the four models metric scores to determine which is the best before I try cross validation and grid search on the models.  
+2. I compared the four models metric scores using cross validation and grid search.  
 
-3. These are the five metric scores to measure which model is the best:
+3. After evaluating the models, it was found that Gradient Boosting emerged as the best model for predicting customer churn in the telecom company's dataset. The key reasons supporting this conclusion are as follows:
 
-**Accuracy*: This metric measures the overall correctness of the model's predictions. It is the ratio of correctly predicted samples to the total number of samples. While accuracy is easy to interpret, it may not be the best metric when classes are imbalanced (i.e., there are significantly more non-churn customers than churn customers).
+**High Accuracy:** Gradient Boosting achieved the highest accuracy of 94.60%, indicating that it correctly predicted customer churn in a significant proportion of cases.
 
-**Precision**: Precision is the ratio of true positive predictions to all positive predictions (true positives + false positives). It indicates the proportion of correctly predicted churn cases among all predicted churn cases. High precision is valuable when the cost of false positives (predicting churn when the customer doesn't churn) is high.
+**High Precision and Recall:** The model exhibited a high precision of 88.00%, signifying that when it predicted a customer would churn, it was accurate about 88.00% of the time. Additionally, the recall score of 80.00% indicated that the model could correctly identify 80.00% of actual churned customers.
 
-**Recall**: (Sensitivity or True Positive Rate): Recall is the ratio of true positive predictions to all actual positive samples (true positives + false negatives). It shows the proportion of correctly predicted churn cases among all actual churn cases. High recall is valuable when the cost of false negatives (missing churn customers) is high.
+**Best F1-Score:** The F1-Score of 83.81% was the highest among all models, implying an optimal balance between precision and recall. This is crucial in an imbalanced dataset like this, where both false positives and false negatives need to be minimized.
 
-**F1-score**: The F1-score is the harmonic mean of precision and recall. It provides a balanced measure between precision and recall and is useful when you want to find a good trade-off between these two metrics.
+**Competitive ROC-AUC:** While Gradient Boosting's ROC-AUC score of 88.85% was slightly lower than the Support Vector Machine, it still demonstrated a strong ability to distinguish between churned and non-churned customers.
 
-**ROC-AUC Score**: The Receiver Operating Characteristic Area Under the Curve (ROC-AUC) is a metric that evaluates the model's ability to discriminate between the two classes. It considers the trade-off between true positive rate (recall) and false positive rate. A higher ROC-AUC score indicates better discrimination ability.
+In this project, we focused on predicting customer churn for an Iranian telecom company. With an emphasis on ROC-AUC and F1 scores, we evaluated four models to strike a balance between identifying churn instances and minimizing false positives. After rigorous analysis, Gradient Boosting emerged as the top-performing model, excelling in both ROC-AUC (0.888) and F1-score (0.838).
 
-4. This is the metrics for the models:
+## 5. Recommendations and Goign Forward
 
-Metrics for Logistic Regression:
-   Accuracy  Precision    Recall  F1-Score   ROC-AUC
-0  0.831746   0.511236  0.827273  0.631944  0.829983
+Based on our findings, we recommend that the telecom company leverages the predictive power of the Gradient Boosting model to enhance customer churn management. By proactively identifying potential churners, the company can tailor retention strategies effectively. This includes personalized offers, targeted communication, and improved customer support for at-risk customers. Regular model updates and continuous monitoring of performance will be essential to ensure the model's effectiveness over time. Additionally, investing in data quality and gathering more features related to customer behavior and preferences can further improve predictive accuracy and optimize retention efforts.
 
-
-Metrics for Random Forest:
-   Accuracy  Precision    Recall  F1-Score   ROC-AUC
-1  0.936508   0.836538  0.790909  0.813084  0.879108
-
-
-Metrics for Gradient Boosting:
-   Accuracy  Precision    Recall  F1-Score   ROC-AUC
-2  0.904762   0.678571  0.863636      0.76  0.888549
-
-
-Metrics for Support Vector Machine:
-   Accuracy  Precision    Recall  F1-Score   ROC-AUC
-3  0.866667   0.570652  0.954545  0.714286  0.901311
-
-5. Based on these evaluation metrics, it seems that the Random Forest model performs the best in terms of accuracy, precision, and F1-score. It achieves the highest accuracy (0.936508) among all models and relatively good precision and recall values, resulting in a good F1-score (0.813084).
-
-An F1 score of .81 is quite good for a customer churn project, especially when dealing with an imbalanced target variable. In projects with imbalanced classes, such as customer churn prediction, where the majority of customers are likely to stay (negative class), achieving high accuracy alone might not be sufficient to evaluate model performance.
-
-The F1 score is a suitable metric for imbalanced datasets as it considers both precision and recall, providing a balance between correctly identifying positive samples (churned customers) and minimizing false positives (incorrectly predicting a customer will churn). An F1 score of .81 indicates that the model is performing well in correctly identifying churned customers while keeping false positives relatively low. Thus I recommend we use the Random Forest Model before we do a cross validation to insure the model scores are relevent. Then grid search to find the best parameters for each model.
-
-In most imbalanced scenarios, you would want to strike a balance between precision and recall. High recall ensures that you capture a significant portion of actual churn cases, while high precision ensures that you avoid making too many false positive predictions. Therefore, the F1-score is often considered a good metric for imbalanced datasets because it combines both precision and recall.
+Overall, the Gradient Boosting model outperformed the other models in various metrics, making it the top choice for predicting customer churn in this telecom company's dataset. The model's ability to strike a balance between precision and recall, along with its high accuracy, makes it a valuable tool for the company to identify and retain potentially churned customers, thus helping to optimize their business strategies and improve customer retention efforts.
