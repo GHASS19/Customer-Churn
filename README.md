@@ -51,9 +51,9 @@ Here is some interesting findings:
 
 **High Correlation**
 
-a. .96, Age & Age Group. five different groups and five ages in this database.
+- .96, Age & Age Group. five different groups and five ages in this database.
 
-b. .95, Seconds of Use & Frequency of use. This makes sense as more calls and seconds of calls go hand in hand.
+- .95, Seconds of Use & Frequency of use. This makes sense as more calls and seconds of calls go hand in hand.
 
 c. .92, Customer Value & Frequency of SMS. This was the most interesting correlation. As the company values customers who use text messages.
 
