@@ -47,7 +47,7 @@ During the Data Wrangling stage we found:
 
 Here is some interesting findings:
 
-1. First thing I did in EDA was a heatmap to see what correlations we had that were positive or negative.
+3.1 First thing I did in EDA was a heatmap to see what correlations we had that were positive or negative.
 
 **High Correlation**
 
@@ -65,7 +65,7 @@ b. -.45, Status & Frequency of Use. This makes sense just like the previous corr
 
 c. -.41, Status & Distinct Called Numbers. Customers cannot dial more numbers if they are inactive.
 
-2. I created a graph of the unbalanced target variable, Churn. This showed us just how big of a difference we had in the customers who did and did not churn.
+3.2 I created a graph of the unbalanced target variable, Churn. This showed us just how big of a difference we had in the customers who did and did not churn.
 
 ![image](https://github.com/GHASS19/Customer-Churn/assets/86930309/162145cd-b130-4925-a975-c115172345be)
 
@@ -77,7 +77,7 @@ c. -.41, Status & Distinct Called Numbers. Customers cannot dial more numbers if
 
 ## 4. Data Preprocessing & Training
 
-1. I Handled class imbalance with class weights for Logistic Regression and Random Forest. I did a 80/20 train/test split with four Classification Models to predict the customer churn:
+4.1 I Handled class imbalance with class weights for Logistic Regression and Random Forest. I did a 80/20 train/test split with four Classification Models to predict the customer churn:
 
 a. Logistic Regression
 
@@ -87,11 +87,11 @@ c. Gradient Boosting
 
 d. Support Vector Machine
 
-I used a standard scaler and class weight of balanced for Logistic Regression and Random Forest Regression to improve convergence, performance, and interpretability. For the Gradient Boosting and Support Vector Machine I used SMOTE for the class imbalance.
+4.2 I used a standard scaler and class weight of balanced for Logistic Regression and Random Forest Regression to improve convergence, performance, and interpretability. For the Gradient Boosting and Support Vector Machine I used SMOTE for the class imbalance.
 
-2. I compared the four models' metric scores using cross validation and grid search.  
+4.3 I compared the four models' metric scores using cross validation and grid search.  
 
-3. After evaluating the models, it was found that Gradient Boosting emerged as the best model for predicting customer churn in the telecom company's dataset. The key reasons supporting this conclusion are as follows:
+4.4 After evaluating the models, it was found that Gradient Boosting emerged as the best model for predicting customer churn in the telecom company's dataset. The key reasons supporting this conclusion are as follows:
 
 **High Accuracy:** Gradient Boosting achieved the highest accuracy of 94.60%, indicating that it correctly predicted customer churn in a significant proportion of cases.
 
@@ -101,7 +101,7 @@ I used a standard scaler and class weight of balanced for Logistic Regression an
 
 **Competitive ROC-AUC:** While Gradient Boosting ROC-AUC score of 88.85% was slightly lower than the Support Vector Machine, it still demonstrated a strong ability to distinguish between churned and non-churned customers.
 
-In this project, we focused on predicting customer churn for an Iranian telecom company. With an emphasis on ROC-AUC and F1 scores, we evaluated four models to strike a balance between identifying churn instances and minimizing false positives. After rigorous analysis, Gradient Boosting emerged as the top-performing model, excelling in both ROC-AUC (0.888) and F1-score (0.838).
+4.5 In this project, we focused on predicting customer churn for an Iranian telecom company. With an emphasis on ROC-AUC and F1 scores, we evaluated four models to strike a balance between identifying churn instances and minimizing false positives. After rigorous analysis, Gradient Boosting emerged as the top-performing model, excelling in both ROC-AUC (0.888) and F1-score (0.838).
 
 ## 5. Recommendations and Going Forward
 
