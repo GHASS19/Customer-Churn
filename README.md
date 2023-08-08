@@ -55,15 +55,15 @@ Here is some interesting findings:
 
 - .95, Seconds of Use & Frequency of use. This makes sense as more calls and seconds of calls go hand in hand.
 
-c. .92, Customer Value & Frequency of SMS. This was the most interesting correlation. As the company values customers who use text messages.
+- .92, Customer Value & Frequency of SMS. This was the most interesting correlation. As the company values customers who use text messages.
 
 **Low Correlation**
 
-a. -.46, Status & Seconds of use. Obviously there is no correlation if the status of a customer is inactive, (2 for inactive and 1 for active) and seconds of telephone calls.
+- -.46, Status & Seconds of use. Obviously there is no correlation if the status of a customer is inactive, (2 for inactive and 1 for active) and seconds of telephone calls.
 
-b. -.45, Status & Frequency of Use. This makes sense just like the previous correlation.
+- -.45, Status & Frequency of Use. This makes sense just like the previous correlation.
 
-c. -.41, Status & Distinct Called Numbers. Customers cannot dial more numbers if they are inactive.
+- -.41, Status & Distinct Called Numbers. Customers cannot dial more numbers if they are inactive.
 
 3.2 I created a graph of the unbalanced target variable, Churn. This showed us just how big of a difference we had in the customers who did and did not churn.
 
