@@ -79,13 +79,13 @@ Here is some interesting findings:
 
 4.1 I Handled class imbalance with class weights for Logistic Regression and Random Forest. I did a 80/20 train/test split with four Classification Models to predict the customer churn:
 
-a. Logistic Regression
+- Logistic Regression
 
-b. Random Forest Model
+- Random Forest Model
 
-c. Gradient Boosting
+- Gradient Boosting
 
-d. Support Vector Machine
+- Support Vector Machine
 
 4.2 I used a standard scaler and class weight of balanced for Logistic Regression and Random Forest Regression to improve convergence, performance, and interpretability. For the Gradient Boosting and Support Vector Machine I used SMOTE for the class imbalance.
 
