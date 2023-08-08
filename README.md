@@ -80,8 +80,11 @@ c. -.41, Status & Distinct Called Numbers. Customers cannot dial more numbers if
 1. I Handled class imbalance with class weights for Logistic Regression and Random Forest. I did a 80/20 train/test split with four Classification Models to predict the customer churn:
 
 a. Logistic Regression
+
 b. Random Forest Model
+
 c. Gradient Boosting
+
 d. Support Vector Machine
 
 I used a standard scaler and class weight of balanced for Logistic Regression and Random Forest Regression to improve convergence, performance, and interpretability. For the Gradient Boosting and Support Vector Machine I used SMOTE for the class imbalance.
